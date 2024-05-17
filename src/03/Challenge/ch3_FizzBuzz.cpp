@@ -7,6 +7,20 @@
 
 #include <iostream>
 
+void fizz_buzz(int n){
+    for (int i = 0; i < n; i++) {
+        if ((i % 3 == 0) && (i % 5 == 0)) {
+            std::cout << "Fizzbuzz" << std::endl;
+        } else if (i % 3 == 0) {
+            std::cout << "Fizz" << std::endl;
+        } else if (i % 5 == 0) {
+            std::cout << "Buzz" << std::endl;
+        } else {
+            std::cout << i << std::endl;
+        }
+    }
+}
+
 // FizzBuzz, main()
 // Summary: This application runs on the main function.
 int main(){
@@ -15,7 +29,7 @@ int main(){
     std::cout << "Enter a positive integer: " << std::flush;
     std::cin >> n;
 
-    // Write your code here
+    fizz_buzz(n);
     
     std::cout << std::endl << std::flush;
     return 0;
