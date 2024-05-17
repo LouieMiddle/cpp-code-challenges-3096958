@@ -7,6 +7,12 @@
 #include <iostream>
 #include <algorithm>
 
+std::string reverseStr(const std::string& str) {
+    std::string reversedStr = str; // Copy the original string
+    std::reverse(reversedStr.begin(), reversedStr.end()); // Reverse the copy
+    return reversedStr;
+}
+
 // is_palindrome()
 // Summary: This function receives a string and returns true if the string is a palindrome, false otherwise.
 // Arguments:
@@ -14,9 +20,9 @@
 // Returns: A boolean value. True for palindromes, false otherwise.
 bool is_palindrome(std::string str){
 
-    // Write your code here
+    std::string str_reverse = reverseStr(str);
 
-    return false;
+    return str.compare(str_reverse) == 0;
 }
 
 // Main function
